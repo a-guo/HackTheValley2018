@@ -3,7 +3,6 @@ font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
-  background-color: #F9F9F9;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 2s; /* Firefox < 16 */
        -ms-animation: fadein 2s; /* Internet Explorer */
@@ -40,9 +39,79 @@ body{
 }
 .background{
   width: 375px;
-  height:667px;
+  height: 667px;
   background-color: #EEEEEE;
   margin:0;
   margin-left: -8px;
-  margin-top: -8px;
+  margin-top: -25px;
+}
+
+#question{
+font-size: 24px;
+font-weight: 300;
+padding: 30px;
+line-height: 35px;
+text-align: center;
+padding-top: 100px;
+
+}
+// =============================
+// Progress bar
+// =============================
+.form-progress {
+	position: relative;
+	display: block;
+	margin: 3rem auto;
+	width: 100%;
+	max-width: 400px;
+}
+
+progress {
+	display: block;
+	position: relative;
+	top: 5px;
+	left: 5px;
+	-webkit-appearance: none;
+	appearance: none;
+	background: $green;
+	width: 100%;
+	height: 5px;
+	background: none;
+	transition: 1s;
+	will-change: contents;
+
+	&::-webkit-progress-bar {
+		background-color: #ddd;
+	}
+
+ &::-webkit-progress-value {
+		background-color: $green;
+		transition: all 0.5s ease-in-out;
+	}
+}
+
+.form-progress-indicator {
+	position: absolute;
+	top: -6px;
+	left: 0;
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: white;
+	border: 3px solid #ddd;
+	border-radius: 50%;
+	transition: all .2s ease-in-out;
+	transition-delay: .3s;
+	will-change: transform;
+
+	&.one		{ left: 0; }
+	&.two 	{ left: 33%; }
+	&.three { left: 66%; }
+	&.four 	{ left: 100%; }
+
+	&.active {
+		animation: bounce .5s forwards;
+		animation-delay: .5s;
+		border-color: $green;
+	}
 }
