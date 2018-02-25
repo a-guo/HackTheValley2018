@@ -58,6 +58,12 @@
 
 }
 
+.fieldgroup input{
+  border-radius: 50%;
+   width: 16px;
+   height: 16px;
+}
+
 /**** Buttons stlyes ***/
 form .buttons button{
   background-color:#DE7C26;
