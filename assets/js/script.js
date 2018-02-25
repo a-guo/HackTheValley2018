@@ -8,8 +8,19 @@ var API_URL = "http://feedmee.azurewebsites.net";
 
 var userName;
 
+function formatName(name) {
+    var hyphen = name.indexOf('-');
+    if (hyphen > -1) {
+      name = name.slice(0, hyphen);
+    }
+    if (name.endsWith(' ')) {
+      name = name.slice(0, -1);
+    }
+    return name;
+}
+
 function populateQuestion(data) {
-  var name = data['name'];
+  var name = formatName(data['name']);
   var ratings = data['rating'];
   var cuisinesList = data['cuisines'];
   var logo_url = data['logo_url'];
@@ -38,7 +49,7 @@ function populateRecommendations(recommendations) {
   for (x in recommendations) {
     var restaurant = recommendations[x];
 
-    var name = restaurant['name'];
+    var name = formatName(restaurant['name']);
     var ratings = restaurant['rating'];
     var cuisinesList = restaurant['cuisines'];
     var logo_url = restaurant['logo_url'];
