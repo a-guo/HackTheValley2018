@@ -12,10 +12,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <title>Hack the Valley</title>
+<script src="assets/js/scripts.js"></script>
+
 </head>
 
 <body>
-  <div class="homePage">
+  <div class="homePage" onclick>
     <div class="background">
       <img src="assets/images/home.jpg" alt="home-image">
     </div>
@@ -29,9 +31,8 @@
     </div>
   </div>
 
-
-
-  <div class="form-step js-form-step" data-step="1">
+<!-- Username ---------------------------------------------------->
+  <div class="form-step js-form-step waiting hidden" data-step="1">
     <p class="form-instructions">Before we find you the perfect restaurant, tell us your name.</p>
     <form action="" name="form-step-1">
       <div class="fieldgroup">
@@ -39,6 +40,18 @@
         <label for="userName">Username</label>
       </div>
     </form>
+  </div>
+
+<!--Categories, i.e. Breakfast, Lunch, Dinner -------------------->
+  <div class="form-step js-form-step waiting hidden" data-step="2">
+  </div>
+
+<!--Cuisines, i.e. Italian, Korean, American --------------------->
+  <div class="form-step js-form-step waiting hidden" data-step="2">
+  </div>
+
+<!--Price Range ------------------------------------------------->
+  <div class="form-step js-form-step waiting hidden" data-step="2">
   </div>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
