@@ -6,11 +6,40 @@ var transitionEnd = 'webkitTransitionEnd transitionend';
 
 $(document).ready(function() {
   $('.userNamePage').hide();
+  $('.categoryChoice').hide();
+  $('.cuisineChoice').hide();
+  $('.priceRangeChoice').hide();
+  $('.restaurantRecommendations').hide();
 
   $('.homePage').on('click', function() {
     $('.homePage').hide();
     $('.userNamePage').show();
   });
+
+  $('.userContinueBtn').on('click', function(e) {
+    e.preventDefault();
+    $('.userNamePage').hide();
+    $('.categoryChoice').show();
+  });
+
+  $('.categoryBtn').on('click', function(e) {
+    e.preventDefault();
+    $('.categoryChoice').hide();
+    $('.cuisineChoice').show();
+  });
+
+  $('.cuisineBtn').on('click', function(e) {
+    e.preventDefault();
+    $('.cuisineChoice').hide();
+    $('.priceRangeChoice').show();
+  });
+
+  $('.priceRangeBtn').on('click', function(e) {
+    e.preventDefault();
+    $('.priceRangeChoice').hide();
+    $('.restaurantRecommendations').show();
+  });
+  
 })
 /** click homePage div and then move to first form */
 
@@ -97,7 +126,7 @@ function showNextForm($currentForm) {
 	value += 33;
 
 	// Reset if we've reached the end
-	if (value >= 100) {
+	if (value >= 100000) {
 		formReset();
 	} else {
 		$('.form-progress')
