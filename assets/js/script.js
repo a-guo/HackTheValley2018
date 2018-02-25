@@ -4,7 +4,69 @@ var $animContainer = $('.animation-container');
 var value = 0;
 var transitionEnd = 'webkitTransitionEnd transitionend';
 
+var API_URL = "http://feedmee.azurewebsites.net";
+
 var userName;
+
+function populateQuestion(data) {
+  var name = data['name'];
+  var ratings = data['rating'];
+  var cuisinesList = data['cuisines'];
+  var logo_url = data['logo_url'];
+  var cuisines = "";
+  for (cuisine of cuisinesList) {
+    cuisines += cuisine + ", ";
+  }
+
+  if (cuisines.endsWith(', ')) {
+    cuisines = cuisines.slice(0, -2);
+  }
+  var price = data['price'];
+  var distance = data['distance'];
+
+  // populating html fields
+  $('#placeholderName').text(name);
+  $('#placeholderRating').text('Rating: ' + ratings);
+  $('#placeholderCuisine').text(cuisines);
+  $('#placeholderPrice').text('$' + price);
+  $('#placeholderDistance').text(distance + ' km');
+  $("#placeholderImage").attr("src", logo_url);
+
+}
+
+function populateRecommendations(recommendations) {
+  for (x in recommendations) {
+    var restaurant = recommendations[x];
+
+    var name = restaurant['name'];
+    var ratings = restaurant['rating'];
+    var cuisinesList = restaurant['cuisines'];
+    var logo_url = restaurant['logo_url'];
+    var cuisines = "";
+    for (cuisine of cuisinesList) {
+      cuisines += cuisine + ", ";
+    }
+
+    if (cuisines.endsWith(', ')) {
+      cuisines = cuisines.slice(0, -2);
+    }
+    var price = restaurant['price'];
+    var distance = restaurant['distance'];
+    console.log(name);
+    console.log(ratings);
+    console.log(cuisines);
+    console.log(price);
+    console.log(distance);
+
+    // populating html fields
+    $('#' + x + 'Name').text(name);
+    $('#' + x + 'Rating').text('Rating: ' + ratings);
+    $('#' + x + 'Cuisine').text(cuisines);
+    $('#' + x + 'Price').text('$' + price);
+    $('#' + x + 'Distance').text(distance + ' km');
+    $('#' + x + 'Image').attr("src", logo_url);
+  }
+}
 
 $(document).ready(function() {
   $('.userNamePage').hide();
@@ -12,25 +74,41 @@ $(document).ready(function() {
   $('.cuisineChoice').hide();
   $('.priceRangeChoice').hide();
   $('.restaurantRecommendations').hide();
+  $('.listOfRecommends').hide();
 
   $('.homePage').on('click', function() {
     $('.homePage').hide();
     $('.userNamePage').show();
-
   });
 
   $('.userContinueBtn').on('click', function(e) {
     e.preventDefault();
     userName = $('#userName').val();
-    $('.userNamePage').hide();
-    $('.categoryChoice').show();
+
+    $.get(
+      API_URL + '/login/' + userName,
+      {},
+      function(data) {
+        $('.userNamePage').hide();
+        $('.categoryChoice').show();
+        console.log('login: ', data);
+      }
+    )
   });
 
   $('.categoryBtn').on('click', function(e) {
     e.preventDefault();
     var category = $('input[name=category]:checked').val();
-    $('.categoryChoice').hide();
-    $('.cuisineChoice').show();
+
+    $.get(
+      API_URL + '/category/' + userName + '/' + category,
+      {},
+      function(data) {
+        $('.categoryChoice').hide();
+        $('.cuisineChoice').show();
+        console.log('category: ', data)
+      }
+    )
   });
 
   $('.cuisineBtn').on('click', function(e) {
@@ -38,18 +116,83 @@ $(document).ready(function() {
     var cuisine = "";
     $('#cuisineDiv').children('input').each(function () {
       if (this.checked) {
-        cuisine+=this.val + ",";
+        cuisine += this.getAttribute('value') + ",";
       }
     });
-    $('.cuisineChoice').hide();
-    $('.priceRangeChoice').show();
+
+    if (cuisine.endsWith(',')) {
+      cuisine = cuisine.slice(0, -1);
+    }
+
+    if (cuisine.length < 1) {
+      cuisine = '_';
+    }
+
+    $.get(
+      API_URL + '/cuisines/' + userName + '/' + cuisine,
+      {},
+      function(data) {
+        $('.cuisineChoice').hide();
+        $('.priceRangeChoice').show();
+        console.log('cuisinse: ', data)
+      }
+    )
   });
 
   $('.priceRangeBtn').on('click', function(e) {
     e.preventDefault();
+    var price_map = {
+        'Inexpensive': {
+          'min': '0',
+          'max': '25'
+        },
+        'Moderate': {
+          'min': '25',
+          'max': '50'
+        },
+        'Lavish': {
+          'min': '50',
+          'max': '100'
+        }
+    }
     var price = $('input[name=priceRange]:checked').val();
-    $('.priceRangeChoice').hide();
-    $('.restaurantRecommendations').show();
+    var price_range = price_map[price];
+    $.get(
+      API_URL + '/price/' + userName + '/' + price_range['min'] + '/' + price_range['max'],
+      {},
+      function(data) {
+        populateQuestion(data['question']);
+        $('.priceRangeChoice').hide();
+        $('.restaurantRecommendations').show();
+        console.log('price: ', data)
+      }
+    )
+  });
+
+  $('.no').on('click', function(e) {
+    e.preventDefault();
+    $.get(
+      API_URL + '/answer/' + userName + '/no',
+      {},
+      function(data) {
+        populateQuestion(data['question']);
+        console.log('answer no: ', data);
+      }
+    )
+  });
+
+  $('.yes').on('click', function(e) {
+    e.preventDefault();
+    $.get(
+      API_URL + '/answer/' + userName + '/yes',
+      {},
+      function(data) {
+        populateRecommendations(data['recommendations']);
+        console.log('answer yes: ', data);
+      }
+    )
+    $('.restaurantRecommendations').hide();
+    $('.listOfRecommends').show();
   });
 
 })

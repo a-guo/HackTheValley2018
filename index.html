@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 <title>Hack the Valley</title>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
@@ -63,7 +67,7 @@
             <input type="radio" name="category" value="breakfast"> Breakfast<br>
             <input type="radio" name="category" value="lunch"> Lunch<br>
             <input type="radio" name="category" value="dinner"> Dinner<br>
-            <input type="radio" name="category" value="cafe"> Café<br>
+            <input type="radio" name="category" value="cafes"> Café<br>
             <input type="radio" name="category" value="nightlife"> Night Life
           </div>
 
@@ -79,16 +83,16 @@
         <p class="form-instructions">Check off the cuisine that your group would NOT want to eat.</p>
         <form action="" name="form-step-3">
           <div id="cuisineDiv" class="fieldgroup">
-              <input type="checkbox">Korean
-              <input type="checkbox">Chinese
-              <input type="checkbox">Japanese
-              <input type="checkbox">Caribbean
-              <input type="checkbox">Middle Eastern
-              <input type="checkbox">Irish
-              <input type="checkbox">French
-              <input type="checkbox">Italian
-              <input type="checkbox">Filipino
-              <input type="checkbox">Indian
+              <input type="checkbox" value="Korean">Korean
+              <input type="checkbox" value="Chinese">Chinese
+              <input type="checkbox" value="Japanese">Japanese
+              <input type="checkbox" value="Caribbean">Caribbean
+              <input type="checkbox" value="Mediterranean">Mediterranean
+              <input type="checkbox" value="Irish">Irish
+              <input type="checkbox" value="French">French
+              <input type="checkbox" value="Italian">Italian
+              <input type="checkbox" value="Filipino">Filipino
+              <input type="checkbox" value="Indian">Indian
           </div>
 
           <div class="buttons">
@@ -119,21 +123,21 @@
       <p class="form-instructions">How about this restaurant?</p>
       <form action="" name="form-step-5">
         <div class="restaurantImage">
-          <img src="" alt="preview">
+          <img id='placeholderImage' src="" alt="preview">
           <div class="restaurantDetails">
-            <h3>Placeholder Name</h3>
-            <p>Placeholder stars</p>
+            <h3 id='placeholderName'>Placeholder Name</h3>
+            <p id='placeholderRating'>Placeholder stars</p>
 
             <div class="container">
               <div class="row">
                 <div class="col-sm">
-                  <p>Cuisine</p>
+                  <p id='placeholderCuisine'>Cuisine</p>
                 </div>
                 <div class="col-sm">
-                  <p>Price Range</p>
+                  <p id='placeholderPrice'>Price Range</p>
                 </div>
                 <div class="col-sm">
-                  <p>Distance</p>
+                  <p id='placeholderDistance'>Distance</p>
                 </div>
               </div>
             </div>
@@ -144,6 +148,43 @@
         <div class="buttons">
             <button type="submit" class="yes btn">Yes</button>
             <button type="submit" class="no btn">No</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="listOfRecommends">
+      <p class="fornm-instructions">Recommendation list</p>
+      <form action="" name="form-step-6">
+        <div class="recommends">
+          <div id='1'>
+            <img id='1Image' src="" alt="preview">
+            <h3 id='1Name'>name</h3>
+            <p id='1Rating'>rating</p>
+            <p id='1Cuisine'>cuisine</p>
+            <p id='1Price'>price</p>
+            <p id='1Distance'>distance</p>
+          </div>
+          <div id='2'>
+            <img id='2Image' src="" alt="preview">
+            <h3 id='2Name'></h3>
+            <p id='2Rating'></p>
+            <p id='2Cuisine'></p>
+            <p id='2Price'></p>
+            <p id='2Distance'>s</p>
+          </div>
+          <div id='3'>
+            <img id='3Image' src="" alt="preview">
+            <h3 id='3Name'></h3>
+            <p id='3Rating'></p>
+            <p id='3Cuisine'></p>
+            <p id='3Price'></p>
+            <p id='3Distance'>s</p>
+          </div>
+
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="restart btn">Restart</button>
         </div>
       </form>
     </div>
