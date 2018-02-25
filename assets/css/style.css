@@ -117,7 +117,12 @@
 
 .priceRangeChoice .buttons button{
   margin-bottom:500px;
-  text-align:center;
+}
+.priceRangeChoice .buttons .priceRangeBtn.btn {
+  margin-top: -150px;
+  margin-left: 110px;
+    width: 150px;
+
 }
 /**** Recommend restaurant stlyes ***/
 
@@ -136,7 +141,8 @@
 .restaurantRecommendations h3 {
 margin-top: 5px;
   font-size: 23px;
-  font-weight: 500
+  font-weight: 500;
+  width: 70%
 
 }
 /***LAST PAGE styles***/
