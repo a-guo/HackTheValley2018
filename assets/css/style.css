@@ -1,0 +1,14 @@
+@import url('bootstrap.min.css');
+
+@media only screen and (max-width: 500px) {
+    background {
+        background-position: center;
+        width: 100px;
+        height: 300px;
+    }
+}
+
+text {
+  font-size: 19px;
+  font-family: sans-serif;
+}
