@@ -92,7 +92,11 @@
   font-size: 20px;
   line-height: 15px
 }
-
+.priceRangeChoice .fieldgroup input{
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
 
 /**** Buttons stlyes ***/
 .buttons button{
@@ -104,6 +108,9 @@
   margin-top: -140px;
   margin-left: 110px;
   font-size: 22px;
+}
+.buttons .yes{
+  margin-top: 10px
 }
 
 .text {
