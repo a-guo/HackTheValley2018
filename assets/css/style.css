@@ -140,33 +140,30 @@ margin-top: 5px;
 
 .lastPage form{
   position: absolute;
-  margin-top:-500px;
-  float: left;
+  margin-top:-700px;
+  margin-left: 20%;
 }
 .lastPage .recommend h3{
   margin-top: 5px;
     font-size: 20px;
     font-weight: 500;
+
 }
 .lastPage .recommend p{
     font-size: 16px;
 }
 .lastPage .recommend #finalImage {
-  float: left;
   width: 60%;
-  margin-left: 5%;
-}
-.lastPage .recommend .finalinfo {
-  float: left;
-  width: 35%;
-  margin:0;
-  padding: 0;
-  padding-left: 3%
-}
-.lastPage button {
-  position: absolute;
+
 }
 
+.buttons .more {
+  font-size: 16px;
+  width: 260px;
+  margin-top: -90px;
+  position: absolute;
+  margin-left: 50px;
+}
 
 /**** Buttons stlyes ***/
 .buttons button{
@@ -195,11 +192,6 @@ margin-top: 5px;
   text-align: center;
 }
 
-.buttons .more {
-  font-size: 16px;
-  width: 260px;
-  margin-top: 90px
-}
 
 .text {
   position: absolute;
