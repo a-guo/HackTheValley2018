@@ -4,13 +4,19 @@ var $animContainer = $('.animation-container');
 var value = 0;
 var transitionEnd = 'webkitTransitionEnd transitionend';
 
+/** click homePage div and then move to first form */
+$('.homePage').on('click', function() {
+  $('.homePage').hide();
+  $('.userNamePage').show();
+});
+
 /**
  * Resets the form back to the default state.
  * ==========================================
  */
 function formReset() {
 	value = 0;
-	$progressBar.val(value);
+	//$progressBar.val(value);
 	$('form input').not('button').val('').removeClass('hasInput');
 	$('.js-form-step').removeClass('left leaving');
 	$('.js-form-step').not('.js-form-step[data-step="1"]').addClass('hidden waiting');
@@ -152,9 +158,3 @@ function init() {
 }
 
 init();
-
-/** click homePage div and then move to first form */
-$('homePage').on('click', function(event) {
-  $('homePage').hide();
-  $('userNamePage').show();
-}

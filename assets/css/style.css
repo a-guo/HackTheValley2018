@@ -202,3 +202,11 @@ input {
   .form-step.coming {
   	animation: right-and-in .5s forwards;
   }
+
+  // =============================
+  // Helpers
+  // =============================
+
+  .hidden {
+  	display: none;
+  }
