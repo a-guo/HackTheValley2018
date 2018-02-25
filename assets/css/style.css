@@ -163,7 +163,17 @@ margin-top: 5px;
 }
 .lastPage .recommend #finalImage {
   width: 60%;
+}
 
+/**** last screen i swear ***/
+
+.listOfRecommends form {
+  margin-top:-460px;
+  margin-left: 20%;
+  position: absolute;
+  line-height: 12px;
+  font-family: "Open-Sans", sans-serif;
+  color: #4A4A4A;
 }
 
 .buttons .more {
