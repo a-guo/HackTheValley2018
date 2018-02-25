@@ -138,11 +138,32 @@ margin-top: 5px;
 
 .lastPage form{
   position: absolute;
-  margin-top:-500px
+  margin-top:-500px;
+  float: left;
 }
-
-
-
+.lastPage .recommend h3{
+  margin-top: 5px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.lastPage .recommend p{
+    font-size: 16px;
+}
+.lastPage .recommend #finalImage {
+  float: left;
+  width: 60%;
+  margin-left: 5%;
+}
+.lastPage .recommend .finalinfo {
+  float: left;
+  width: 35%;
+  margin:0;
+  padding: 0;
+  padding-left: 3%
+}
+.lastPage button {
+  position: absolute;
+}
 
 
 /**** Buttons stlyes ***/
