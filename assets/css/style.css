@@ -134,6 +134,16 @@ margin-top: 5px;
   font-weight: 500
 
 }
+/***LAST PAGE styles***/
+
+.lastPage form{
+  position: absolute;
+  margin-top:-500px
+}
+
+
+
+
 
 /**** Buttons stlyes ***/
 .buttons button{
@@ -160,6 +170,12 @@ margin-top: 5px;
   font-size: 18px;
   margin-top: -80px;
   text-align: center;
+}
+
+.buttons .more {
+  font-size: 16px;
+  width: 260px;
+  margin-top: 90px
 }
 
 .text {
