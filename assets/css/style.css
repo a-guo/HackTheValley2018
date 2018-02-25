@@ -68,7 +68,7 @@
   height: 15px;
 }
 .categoryChoice .fieldgroup{
-  margin-left: 120px;
+  margin-left: 70px;
 
 }
 
@@ -84,7 +84,7 @@
   margin-top: -90px
 }
 
-
+/** price range stlyes**/
 .priceRangeChoice form{
   position: absolute;
   margin-top: -430px;
