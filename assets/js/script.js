@@ -9,6 +9,7 @@ $(document).ready(function() {
   $('.categoryChoice').hide();
   $('.cuisineChoice').hide();
   $('.priceRangeChoice').hide();
+  $('.restaurantRecommendations').hide();
 
   $('.homePage').on('click', function() {
     $('.homePage').hide();
@@ -38,6 +39,7 @@ $(document).ready(function() {
     $('.priceRangeChoice').hide();
     $('.restaurantRecommendations').show();
   });
+  
 })
 /** click homePage div and then move to first form */
 
