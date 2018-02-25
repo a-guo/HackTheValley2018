@@ -117,17 +117,35 @@
   margin-top:100px
 }
 /**** Recommend restaurant stlyes ***/
+
+
 .restaurantRecommendations form{
   position: absolute;
   margin-top: -480px;
-  margin-left: 50px;
   font-size: 20px;
   line-height: ;
+  margin-left: 70px;
 }
 
 .restaurantRecommendations p {
   font-size: 16px;
 }
+.restaurantRecommendations h3 {
+margin-top: 5px;
+  font-size: 23px;
+  font-weight: 500
+
+}
+/***LAST PAGE styles***/
+
+.lastPage form{
+  position: absolute;
+  margin-top:-500px
+}
+
+
+
+
 
 /**** Buttons stlyes ***/
 .buttons button{
@@ -141,19 +159,25 @@
   font-size: 22px;
 }
 .buttons .yes{
-  margin-left: 140px;
+  margin-left: 210px;
   float: left;
 }
 .buttons .no{
-  margin-left: 50px;
+  margin-left: 100px;
 }
 .buttons .yes, .buttons .no{
   position: absolute;
   width: 58px;
   height: 58px;
   font-size: 18px;
-  margin-top: -60px;
+  margin-top: -80px;
   text-align: center;
+}
+
+.buttons .more {
+  font-size: 16px;
+  width: 260px;
+  margin-top: 90px
 }
 
 .text {
@@ -341,7 +365,7 @@ form .btn {
   width: 5px;
   height: 10px;
   border: solid white;
-  border-width: 0 3px 3px 0;
+  border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
