@@ -152,3 +152,8 @@ function init() {
 }
 
 init();
+
+/** click homePage div and then move to first form */
+$('homePage').on('click', function(event) {
+  $('form-step').show().siblings('div').hide();
+}
