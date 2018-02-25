@@ -35,6 +35,15 @@
   margin-left: 30px;
 }
 
+.categoryChoice form {
+  position: absolute;
+  margin-top: -400px;
+  margin-left: 70px;
+}
+
+.categoryChoice input {
+  background-color: #4CAF50;
+}
 
 form .buttons button{
   background-color:#DE7C26;
