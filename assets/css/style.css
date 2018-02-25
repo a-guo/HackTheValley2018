@@ -45,18 +45,41 @@
   position: absolute;
   margin-top: -400px;
   margin-left: 70px;
+  font-size: 20px;
+  line-height: 30px
+}
+.categoryChoice form{
+  position: absolute;
+  margin-top: -400px;
+  font-size: 20px;
 }
 
 .categoryChoice input {
   background-color: #4CAF50;
 }
-=======
-.cuisineChoice form{
-  position: absolute;
-  margin-top: -400px;
->>>>>>> c29f6392798e00a35a5a8b4622743d5fdfd47831
+
+.categoryChoice .fieldgroup input{
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+.categoryChoice .fieldgroup{
+  margin-left: 120px;
 
 }
+
+/** CUISINES stlyes**/
+.cuisineChoice form {
+  position: absolute;
+  margin-top: -430px;
+  margin-left: 70px;
+  font-size: 20px;
+  line-height: 15px
+}
+.cuisineChoice{
+  
+}
+
 
 /**** Buttons stlyes ***/
 form .buttons button{
