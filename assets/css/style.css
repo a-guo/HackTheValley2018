@@ -78,3 +78,32 @@ input {
 	&:focus {
 		outline: none;
 	}
+
+  // =============================
+  // Form animations
+  // =============================
+  .animation-container {
+  	position: relative;
+  	width: 100%;
+  	transition: .3s;
+  	will-change: padding;
+  	overflow: hidden;
+  }
+  .form-step {
+  	position: absolute;
+  	transition: 1s ease-in-out;
+  	transition-timing-function: ease-in-out;
+  	will-change: transform, opacity;
+  }
+
+  .form-step.leaving {
+  	animation: left-and-out .5s forwards;
+  }
+
+  .form-step.waiting {
+  	transform: translateX(400px);
+  }
+
+  .form-step.coming {
+  	animation: right-and-in .5s forwards;
+  }
