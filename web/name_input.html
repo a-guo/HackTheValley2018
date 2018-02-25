@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="css/stylesheet_name_input.css">
+<script src="js/form.js"></script>
+<title>Name input</title>
+</head>
+
+<body>
+    <div class="background">
+      <p id="question">
+      Before we find you the perfect restaurant, tell us your name.
+    </p>
+    <section class="section">
+
+
+
+    	<div class="animation-container">
+    		<!-- Step one -->
+    		<div class="form-step js-form-step" data-step="1">
+
+
+    			<form action="" name="form-step-1">
+    				<div class="fieldgroup">
+    					<input type="text" name="firstName" id="firstName" placeholder="Enter your name"/>
+    				</div>
+
+
+
+    				<div class="buttons">
+    							<button type="button" class="btn btn-alt js-reset">Reset</button>
+
+    						<button type="submit" class="btn">Continue</button>
+    				</div>
+    			</form>
+
+    		</div>
+
+    			<!-- Step two -->
+    			<div class="form-step js-form-step waiting hidden" data-step="2">
+
+    				<p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
+    						<br> Please fill in the token below with yesterday's date plus the timestamp from the day of your birth (expressed as an integer) to the power of fourteen divided by two.</p>
+
+    				<form action="" name="form-step-2">
+    						<div class="fieldgroup">
+    								<input type="text" name="token" id="token" />
+    								<label for="token">Token</label>
+    						</div>
+
+    						<div class="buttons">
+    								<button type="button" class="btn btn-alt js-reset">Reset</button>
+
+    								<button type="submit" class="btn">Continue</button>
+    						</div>
+    				</form>
+
+    		</div>
+
+
+
+    					<!-- Step three -->
+    			<div class="form-step js-form-step waiting hidden" data-step="3">
+
+    				<p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
+    						<br> Please tell us your credit card information. We promise not to store it or use it to buy a new iPhone in the App Store.</p>
+
+    				<form action="" name="form-step-3">
+    						<div class="fieldgroup">
+    								<input type="text" name="credit-card" id="credit-card" />
+    								<label for="credit-card">Credit card number</label>
+    						</div>
+
+    						<div class="fieldgroup">
+    								<input type="text" name="credit-card-expiry" id="credit-card-expiry" />
+    								<label for="credit-card-expiry">Credit card expiry</label>
+    						</div>
+
+    						<div class="buttons">
+    								<button type="button" class="btn btn-alt js-reset">Reset</button>
+
+    								<button type="submit" class="btn">Continue</button>
+    						</div>
+    				</form>
+
+    		</div>
+
+
+
+    		<!-- Step four -->
+    			<div class="form-step js-form-step waiting hidden" data-step="4">
+
+    				<p class="form-instructions"><strong>Click the continue button to show form progression.</strong>
+    						<br> Finally, please just write the words "I Agree" in the field below to consent to us using the previous data you entered to buy a new iPhone.</p>
+
+    				<form action="" name="form-step-4">
+    						<div class="fieldgroup">
+    								<input type="text" name="agreen" id="agreen" />
+    								<label for="agreen">I agree</label>
+    						</div>
+
+    						<div class="buttons">
+    								<button type="button" class="btn btn-alt js-reset">Reset</button>
+    						</div>
+    				</form>
+
+    		</div>
+    	</div>
+    </section>
+
+
+
+
+</body>
+
+
+</html>
