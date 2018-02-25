@@ -65,6 +65,16 @@ function populateRecommendations(recommendations) {
     $('#' + x + 'Price').text('$' + price);
     $('#' + x + 'Distance').text(distance + ' km');
     $('#' + x + 'Image').attr("src", logo_url);
+
+    if (x == 0) {
+      var a = "final";
+      $('#' + a + 'Name').text(name);
+      $('#' + a + 'Rating').text('Rating: ' + ratings);
+      $('#' + a + 'Cuisine').text(cuisines);
+      $('#' + a + 'Price').text('$' + price);
+      $('#' + a + 'Distance').text(distance + ' km');
+      $('#' + a + 'Image').attr("src", logo_url);
+    }
   }
 }
 
@@ -75,6 +85,7 @@ $(document).ready(function() {
   $('.priceRangeChoice').hide();
   $('.restaurantRecommendations').hide();
   $('.listOfRecommends').hide();
+  $('.lastPage').hide();
 
   $('.homePage').on('click', function() {
     $('.homePage').hide();
@@ -198,8 +209,17 @@ $(document).ready(function() {
       }
     )
     $('.restaurantRecommendations').hide();
+    $('.lastPage').show();
+  });
+
+  $('.more').on('click', function(e) {
+    e.preventDefault();
+    formReset();
+    $('.lastPage').hide();
     $('.listOfRecommends').show();
   });
+
+
 
 })
 /** click homePage div and then move to first form */
