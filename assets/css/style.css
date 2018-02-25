@@ -27,6 +27,11 @@
       height: auto;
       background-size: contain;
     }
+    .priceRangeChoice img{
+      max-width: 100%;
+      height: auto;
+      background-size: contain;
+    }
 }
 
 .userNamePage input {
@@ -78,6 +83,15 @@
 }
 .cuisineChoice .buttons button {
   margin-top: -90px
+}
+
+
+.priceRangeChoice form{
+  position: absolute;
+  margin-top: -430px;
+  margin-left: 100px;
+  font-size: 20px;
+  line-height: 15px
 }
 
 
