@@ -37,12 +37,21 @@
       height: auto;
       background-size: contain;
     }
+    .lastPage img {
+      max-width: 100%;
+      height: auto;
+      background-size: contain;
+    }
+    .listOfRecommends img {
+      max-width: 100%;
+      height: auto;
+      background-size: contain;
+    }
 }
 
 .userNamePage input {
   font-size: 22px;
   padding-bottom: 1px;
-
 }
 .userNamePage form {
   position: absolute;
