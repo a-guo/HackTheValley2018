@@ -4,11 +4,13 @@ var $animContainer = $('.animation-container');
 var value = 0;
 var transitionEnd = 'webkitTransitionEnd transitionend';
 
+$(document).ready(function() {
+  $('.homePage').on('click', function() {
+    $('.homePage').hide();
+    $('.userNamePage').show();
+  });
+})
 /** click homePage div and then move to first form */
-$('.homePage').on('click', function() {
-  $('.homePage').hide();
-  $('.userNamePage').show();
-});
 
 /**
  * Resets the form back to the default state.
