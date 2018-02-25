@@ -1,5 +1,76 @@
 @import url('bootstrap.min.css');
 
+
+@font-face {
+    font-family: 'san_francisco_displaybold';
+    src: url('sanfranciscodisplay-bold-webfont.woff2') format('woff2'),
+         url('sanfranciscodisplay-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'san_francisco_displayheavy';
+    src: url('sanfranciscodisplay-heavy-webfont.woff2') format('woff2'),
+         url('sanfranciscodisplay-heavy-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'san_francisco_displaylight';
+    src: url('sanfranciscodisplay-light-webfont.woff2') format('woff2'),
+         url('sanfranciscodisplay-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'san_francisco_displaymedium';
+    src: url('sanfranciscodisplay-medium-webfont.woff2') format('woff2'),
+         url('sanfranciscodisplay-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'san_francisco_displayregular';
+    src: url('sanfranciscodisplay-regular-webfont.woff2') format('woff2'),
+         url('sanfranciscodisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'san_francisco_displaysemibold';
+    src: url('sanfranciscodisplay-semibold-webfont.woff2') format('woff2'),
+         url('sanfranciscodisplay-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+}
+
 .background{
   width: 100%;
   height: auto;
@@ -15,12 +86,15 @@
 
 .text {
   position: absolute;
+  color: #DE7C26;
+  font-weight: 600;
   font-size: 20px;
-  font-family: sans-serif;
+  font-family: "san_francisco_displaymedium", sans-serif;
   margin-top: -300px;
-  margin-lefT: 18%;
+  margin-lefT: 13%;
   text-align: center;
 }
+
 .logo img {
   width: auto;
   position: absolute;
