@@ -4,6 +4,8 @@ var $animContainer = $('.animation-container');
 var value = 0;
 var transitionEnd = 'webkitTransitionEnd transitionend';
 
+var userName;
+
 $(document).ready(function() {
   $('.userNamePage').hide();
   $('.categoryChoice').hide();
@@ -14,32 +16,42 @@ $(document).ready(function() {
   $('.homePage').on('click', function() {
     $('.homePage').hide();
     $('.userNamePage').show();
+
   });
 
   $('.userContinueBtn').on('click', function(e) {
     e.preventDefault();
+    userName = $('#userName').val();
     $('.userNamePage').hide();
     $('.categoryChoice').show();
   });
 
   $('.categoryBtn').on('click', function(e) {
     e.preventDefault();
+    var category = $('input[name=category]:checked').val();
     $('.categoryChoice').hide();
     $('.cuisineChoice').show();
   });
 
   $('.cuisineBtn').on('click', function(e) {
     e.preventDefault();
+    var cuisine = "";
+    $('#cuisineDiv').children('input').each(function () {
+      if (this.checked) {
+        cuisine+=this.val + ",";
+      }
+    });
     $('.cuisineChoice').hide();
     $('.priceRangeChoice').show();
   });
 
   $('.priceRangeBtn').on('click', function(e) {
     e.preventDefault();
+    var price = $('input[name=priceRange]:checked').val();
     $('.priceRangeChoice').hide();
     $('.restaurantRecommendations').show();
   });
-  
+
 })
 /** click homePage div and then move to first form */
 
