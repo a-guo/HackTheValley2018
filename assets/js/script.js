@@ -5,6 +5,8 @@ var value = 0;
 var transitionEnd = 'webkitTransitionEnd transitionend';
 
 $(document).ready(function() {
+  $('.userNamePage').hide();
+
   $('.homePage').on('click', function() {
     $('.homePage').hide();
     $('.userNamePage').show();
