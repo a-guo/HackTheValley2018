@@ -114,7 +114,13 @@ $(document).ready(function() {
   $('.cuisineBtn').on('click', function(e) {
     e.preventDefault();
     var cuisine = "";
-    $('#cuisineDiv').children('input').each(function () {
+    $('#cuisineDiv1').children('input').each(function () {
+      if (this.checked) {
+        cuisine += this.getAttribute('value') + ",";
+      }
+    });
+
+    $('#cuisineDiv2').children('input').each(function () {
       if (this.checked) {
         cuisine += this.getAttribute('value') + ",";
       }

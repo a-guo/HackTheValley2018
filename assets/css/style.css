@@ -5,13 +5,73 @@
   font-family: 'Open Sans', sans-serif;
 
 }
-
+/**** Mobile screen size styles ***/
 @media only screen and (max-width: 768px) {
     .background img{
       max-width: 100%;
       height: auto;
       background-size: contain;
     }
+    .userNamePage img{
+      max-width: 100%;
+      height: auto;
+      background-size: contain;
+    }
+    .categoryChoice img {
+      max-width: 100%;
+      height: auto;
+      background-size: contain;
+    }
+    .cuisineChoice img {
+      max-width: 100%;
+      height: auto;
+      background-size: contain;
+    }
+}
+
+.userNamePage input {
+  font-size: 22px;
+  padding-bottom: 1px;
+
+}
+.userNamePage form {
+  position: absolute;
+  margin-top: -320px;
+  margin-left: 30px;
+}
+
+<<<<<<< HEAD
+.categoryChoice form {
+  position: absolute;
+  margin-top: -400px;
+  margin-left: 70px;
+}
+
+.categoryChoice input {
+  background-color: #4CAF50;
+}
+=======
+.cuisineChoice form{
+  position: absolute;
+  margin-top: -400px;
+>>>>>>> c29f6392798e00a35a5a8b4622743d5fdfd47831
+
+}
+
+.fieldgroup input{
+  border-radius: 50%;
+   width: 16px;
+   height: 16px;
+}
+
+/**** Buttons stlyes ***/
+form .buttons button{
+  background-color:#DE7C26;
+  color: white;
+  border-radius: 100px;
+  width: 150px;
+  margin-top: 90px;
+  font-size: 22px;
 }
 
 .text {
@@ -32,7 +92,6 @@
   margin-left: 80px
 }
 
-
 .form-instructions {
 	text-align: center;
 }
@@ -48,7 +107,6 @@ form {
 // =============================
 .btn {
 	color: #fff;
-	background-color: $green;
 	padding: .8rem;
 	font-size: 1.2rem;
 	line-height: 1.2rem;

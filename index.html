@@ -46,48 +46,48 @@
   <!-- Username ---------------------------------------------------->
     <div class="form-step js-form-step waiting hidden userNamePage" data-step="1">
       <img src="assets/images/pica.png" alt="username image">
-      <p class="form-instructions">Before we find you the perfect restaurant, tell us your name.</p>
       <form action="" name="form-step-1">
         <div class="fieldgroup">
           <input type="text" name="userName" id="userName" placeholder="Enter your username"/>
         </div>
 
         <div class="buttons">
-            <button type="submit" class="userContinueBtn btn">Continue</button>
+            <button type="submit" class="userContinueBtn btn">Next</button>
         </div>
       </form>
     </div>
 
     <!--Categories, i.e. Breakfast, Lunch, Dinner --------------------->
       <div class="categoryChoice form-step js-form-step waiting hidden" data-step="2">
-        <h1>Food Squad</h1>
-        <p class="form-instructions">Please choose one of the following categories.</p>
+        <img src="assets/images/picb.png" alt = "bkgnd image">
         <form action="" name="form-step-2">
           <div class="fieldgroup">
             <input type="radio" name="category" value="breakfast"> Breakfast<br>
             <input type="radio" name="category" value="lunch"> Lunch<br>
             <input type="radio" name="category" value="dinner"> Dinner<br>
             <input type="radio" name="category" value="cafes"> Café<br>
-            <input type="radio" name="category" value="nightlife"> Night Life
+            <input type="radio" name="category" value="nightlife"> Night Life<br>
+
           </div>
 
           <div class="buttons">
-              <button type="submit" class="categoryBtn btn">Continue</button>
+              <button type="submit" class="categoryBtn btn">Next</button>
           </div>
         </form>
       </div>
 
     <!--Cuisines, i.e. Italian, Korean, American --------------------->
       <div class="cuisineChoice form-step js-form-step waiting hidden" data-step="3">
-        <h1>Food Squad</h1>
-        <p class="form-instructions">Check off the cuisine that your group would NOT want to eat.</p>
+        <img src="assets/images/cuisines.png" alt="cuisines image">
         <form action="" name="form-step-3">
-          <div id="cuisineDiv" class="fieldgroup">
+          <div id="cuisineDiv1" class="fieldgroup">
               <input type="checkbox" value="Korean">Korean
               <input type="checkbox" value="Chinese">Chinese
               <input type="checkbox" value="Japanese">Japanese
               <input type="checkbox" value="Caribbean">Caribbean
               <input type="checkbox" value="Mediterranean">Mediterranean
+            </div>
+            <div id="cuisineDiv2" class="fieldgroup">
               <input type="checkbox" value="Irish">Irish
               <input type="checkbox" value="French">French
               <input type="checkbox" value="Italian">Italian
@@ -96,7 +96,7 @@
           </div>
 
           <div class="buttons">
-              <button type="submit" class="cuisineBtn btn">Continue</button>
+              <button type="submit" class="cuisineBtn btn">Next</button>
           </div>
         </form>
     </div>
@@ -113,7 +113,7 @@
           </div>
 
           <div class="buttons">
-              <button type="submit" class="priceRangeBtn btn">Continue</button>
+              <button type="submit" class="priceRangeBtn btn">Next</button>
           </div>
         </form>
     </div>
