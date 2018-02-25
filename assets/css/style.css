@@ -17,6 +17,11 @@
       height: auto;
       background-size: contain;
     }
+    .categoryChoice img {
+      max-width: 100%;
+      height: auto;
+      background-size: contain;
+    }
 }
 
 .userNamePage input {
@@ -27,6 +32,12 @@
 .userNamePage form {
   position: absolute;
   margin-top: -280px;
+  margin-left: 30px;
+}
+
+.categoryChoice form {
+  position: absolute;
+  margin-top: -420px;
   margin-left: 30px;
 }
 
